@@ -24,12 +24,12 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         convertedTempLabel.text = "32 ºF"
     }
-
+    
     @IBAction func sliderValueChanged(_ sender: Any) {
         print("tempSlider:", tempSlider.value)
         updateTempLabelForSlider(value: tempSlider.value)
     }
-
+    
     
     @IBAction func segmentValueChanged(_ sender: UISegmentedControl) {
         updateTempLabelForSlider(value: tempSlider.value)
@@ -57,25 +57,18 @@ class ViewController: UIViewController {
         return (fahrenheit, kelvin)
     }
     
-}
-
-
-
-// MARK: - infoTempConvert segue
-
-override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     
-    if segue.identifier == "infoTempConvert" {
+    // MARK: - infoTempConvert segue
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        let vc = segue.destination as! InfoViewController
-        vc.infoText = "Current result is:"
-        vc.appResultText = ""
+        if segue.identifier == "infoTempConvert" {
+            
+            let vc = segue.destination as! InfoViewController
+            vc.infoText = "My homework was to create a temperature converter. Current result is:"
+            vc.appResultText = "There must be a result!!"
+        }
+        
     }
     
-   /* if segue.identifier == "infoTempConvert" {
-        let viewCont = segue.destination as! InfoViewController
-        viewCont.infoText = "Current result is:"
-        viewCont.appResultText = "This is my homework project."
-    } */
 }
-

@@ -12,12 +12,11 @@ class InfoViewController: UIViewController {
     @IBOutlet weak var appInfoLabel: UILabel!
     @IBOutlet weak var appResultLabel: UILabel!
     
-    var infoText = "My homework was to create a temperature converter."
+    var infoText = ""
     var appResultText = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        appResultText.text = appResultText
         
         if !infoText.isEmpty && !appResultText.isEmpty{
             appInfoLabel.text = infoText
@@ -25,8 +24,5 @@ class InfoViewController: UIViewController {
         }
         
     }
-    
-    
-    
     
 }
