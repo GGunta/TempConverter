@@ -59,3 +59,23 @@ class ViewController: UIViewController {
     
 }
 
+
+
+// MARK: - infoTempConvert segue
+
+override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    
+    if segue.identifier == "infoTempConvert" {
+        
+        let vc = segue.destination as! InfoViewController
+        vc.infoText = "Current result is:"
+        vc.appResultText = ""
+    }
+    
+   /* if segue.identifier == "infoTempConvert" {
+        let viewCont = segue.destination as! InfoViewController
+        viewCont.infoText = "Current result is:"
+        viewCont.appResultText = "This is my homework project."
+    } */
+}
+

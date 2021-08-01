@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -134,14 +135,48 @@
                     <view key="view" contentMode="scaleToFill" id="Uqk-7c-Maq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="FGq-wK-Irx">
+                                <rect key="frame" x="78" y="268.5" width="219" height="130"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Info" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v3u-nf-jDv">
+                                        <rect key="frame" x="0.0" y="0.0" width="219" height="61"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="219" id="nnU-C6-fKQ"/>
+                                            <constraint firstAttribute="height" constant="61" id="sVL-hJ-GbR"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="24"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3xI-SG-NNv">
+                                        <rect key="frame" x="0.0" y="69" width="219" height="61"/>
+                                        <color key="backgroundColor" name="AccentColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="61" id="QUL-zh-8I4"/>
+                                            <constraint firstAttribute="width" constant="219" id="UPP-v2-gPn"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="24"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Dap-r0-FR0"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="FGq-wK-Irx" firstAttribute="centerY" secondItem="Uqk-7c-Maq" secondAttribute="centerY" id="Zzq-0r-T6j"/>
+                            <constraint firstItem="FGq-wK-Irx" firstAttribute="centerX" secondItem="Uqk-7c-Maq" secondAttribute="centerX" id="l4A-9Q-l8i"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="m8C-Ft-8RX"/>
+                    <connections>
+                        <outlet property="appInfoLabel" destination="v3u-nf-jDv" id="XIO-m4-86w"/>
+                        <outlet property="appResultLabel" destination="3xI-SG-NNv" id="dTp-LD-EQi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dAh-dC-UxP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="887" y="743"/>
+            <point key="canvasLocation" x="885.60000000000002" y="742.5787106446777"/>
         </scene>
         <!--Appearance View Controller-->
         <scene sceneID="r0d-XZ-O30">
@@ -158,23 +193,31 @@
                                 <state key="normal" title="Exit">
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layoutcornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="closeButtonTapped:" destination="yU8-un-Pcu" eventType="touchUpInside" id="UN8-99-n89"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="4qk-H8-IBs">
-                                <rect key="frame" x="92.5" y="252" width="190" height="143"/>
+                                <rect key="frame" x="92.5" y="251" width="190" height="145"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Light Mode is On" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E4x-di-zZX">
-                                        <rect key="frame" x="0.0" y="0.0" width="190" height="68"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Light Mode is On" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E4x-di-zZX">
+                                        <rect key="frame" x="0.0" y="0.0" width="190" height="70"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="68" id="8fA-lr-A5O"/>
+                                            <constraint firstAttribute="height" constant="70" id="8fA-lr-A5O"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="190" id="mcR-mQ-j6P"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="24"/>
+                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="22"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ePj-Ke-bnr">
-                                        <rect key="frame" x="0.0" y="83" width="190" height="60"/>
-                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                        <rect key="frame" x="0.0" y="85" width="190" height="60"/>
+                                        <color key="backgroundColor" name="AccentColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="b31-oI-SXZ"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="190" id="ctO-O1-bha"/>
@@ -183,6 +226,9 @@
                                         <state key="normal" title="Open Settings">
                                             <color key="titleColor" systemColor="labelColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="openSettingsTapped:" destination="yU8-un-Pcu" eventType="touchUpInside" id="wgp-4E-YS7"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -197,6 +243,9 @@
                             <constraint firstItem="kpX-W9-Y6G" firstAttribute="leading" secondItem="eel-SK-w7T" secondAttribute="leading" constant="281" id="kLl-Hd-u1i"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="textLabel" destination="E4x-di-zZX" id="O2N-Fm-PKZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qN1-N2-IAe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -227,14 +276,14 @@
         <image name="sun.max" catalog="system" width="128" height="124"/>
         <image name="sun.min" catalog="system" width="128" height="121"/>
         <image name="thermometer" catalog="system" width="93" height="128"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
