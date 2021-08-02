@@ -12,8 +12,8 @@ class InfoViewController: UIViewController {
     @IBOutlet weak var appInfoLabel: UILabel!
     @IBOutlet weak var appResultLabel: UILabel!
     
-    var infoText = "My homework was to create a temperature converter.\nCurrent result is:"
-    var appResultText = "There must be a result!!"
+    var infoText = ""
+    var appResultText = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
