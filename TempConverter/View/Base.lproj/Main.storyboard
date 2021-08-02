@@ -131,31 +131,31 @@
         <!--Info View Controller-->
         <scene sceneID="uIp-Sq-p0R">
             <objects>
-                <viewController id="Kpv-tZ-RWK" customClass="InfoViewController" sceneMemberID="viewController">
+                <viewController id="Kpv-tZ-RWK" customClass="InfoViewController" customModule="TempConverter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Uqk-7c-Maq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="FGq-wK-Irx">
-                                <rect key="frame" x="78" y="268.5" width="219" height="130"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="0P8-g3-Mbj">
+                                <rect key="frame" x="37.5" y="268.5" width="300" height="130"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Info" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v3u-nf-jDv">
-                                        <rect key="frame" x="0.0" y="0.0" width="219" height="61"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="61"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="219" id="nnU-C6-fKQ"/>
-                                            <constraint firstAttribute="height" constant="61" id="sVL-hJ-GbR"/>
+                                            <constraint firstAttribute="width" constant="300" id="nnU-C6-fKQ"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="61" id="sVL-hJ-GbR"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="24"/>
+                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="20"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3xI-SG-NNv">
-                                        <rect key="frame" x="0.0" y="69" width="219" height="61"/>
+                                        <rect key="frame" x="40.5" y="69" width="219" height="61"/>
                                         <color key="backgroundColor" name="AccentColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="61" id="QUL-zh-8I4"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="61" id="QUL-zh-8I4"/>
                                             <constraint firstAttribute="width" constant="219" id="UPP-v2-gPn"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="24"/>
+                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="20"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -164,14 +164,14 @@
                         <viewLayoutGuide key="safeArea" id="Dap-r0-FR0"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="FGq-wK-Irx" firstAttribute="centerY" secondItem="Uqk-7c-Maq" secondAttribute="centerY" id="Zzq-0r-T6j"/>
-                            <constraint firstItem="FGq-wK-Irx" firstAttribute="centerX" secondItem="Uqk-7c-Maq" secondAttribute="centerX" id="l4A-9Q-l8i"/>
+                            <constraint firstItem="0P8-g3-Mbj" firstAttribute="centerX" secondItem="Uqk-7c-Maq" secondAttribute="centerX" id="CGA-lS-MP6"/>
+                            <constraint firstItem="0P8-g3-Mbj" firstAttribute="centerY" secondItem="Uqk-7c-Maq" secondAttribute="centerY" id="aqe-kK-U49"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="m8C-Ft-8RX"/>
                     <connections>
-                        <outlet property="appInfoLabel" destination="v3u-nf-jDv" id="XIO-m4-86w"/>
-                        <outlet property="appResultLabel" destination="3xI-SG-NNv" id="dTp-LD-EQi"/>
+                        <outlet property="appInfoLabel" destination="v3u-nf-jDv" id="Cfu-bh-w6H"/>
+                        <outlet property="appResultLabel" destination="3xI-SG-NNv" id="1IJ-hf-ENK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dAh-dC-UxP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -181,7 +181,7 @@
         <!--Appearance View Controller-->
         <scene sceneID="r0d-XZ-O30">
             <objects>
-                <viewController id="yU8-un-Pcu" customClass="AppearanceViewController" sceneMemberID="viewController">
+                <viewController id="yU8-un-Pcu" customClass="AppearanceViewController" customModule="TempConverter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MIF-dB-65F">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -194,7 +194,7 @@
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layoutcornerRadius">
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="15"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
@@ -208,7 +208,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Light Mode is On" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E4x-di-zZX">
                                         <rect key="frame" x="0.0" y="0.0" width="190" height="70"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="70" id="8fA-lr-A5O"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="8fA-lr-A5O"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="190" id="mcR-mQ-j6P"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="22"/>
@@ -219,7 +219,7 @@
                                         <rect key="frame" x="0.0" y="85" width="190" height="60"/>
                                         <color key="backgroundColor" name="AccentColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="60" id="b31-oI-SXZ"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="b31-oI-SXZ"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="190" id="ctO-O1-bha"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="22"/>

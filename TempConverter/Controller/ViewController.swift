@@ -65,10 +65,10 @@ class ViewController: UIViewController {
         if segue.identifier == "infoTempConvert" {
             
             let vc = segue.destination as! InfoViewController
-            vc.infoText = "My homework was to create a temperature converter. Current result is:"
+            vc.infoText = "My homework was to create\na temperature converter.\nCurrent result is:"
             vc.appResultText = "There must be a result!!"
         }
-        
     }
-    
 }
+
+
